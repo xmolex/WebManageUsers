@@ -1,0 +1,10 @@
+% layout 'default';
+% title 'Регистрация';
+    <form class="form-signin" onsubmit="join(); return false">
+      <h1 class="h3 mb-3 font-weight-normal">Регистрация</h1>
+      <label for="inputLogin" class="sr-only">Логин</label>
+      <input type="login" id="form-login" class="form-control" placeholder="Login" required autofocus>
+      <label for="inputPassword" class="sr-only">Пароль</label>
+      <input type="password" id="form-pass" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">отправить</button>
+    </form>

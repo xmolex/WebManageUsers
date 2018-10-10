@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css?v0.1">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/basic.js?v0.1"></script>
+  </head>
+<body class="text-center">
+    <div style="position: absolute; padding: 30px; top: 1px; left: 20px;">
+        <a href="/">Главная</a>
+    </div>
+    <div style="position: absolute; padding: 30px; top: 1px; right: 20px;">
+    <% if ($auth_id) { %>
+    <%= $auth_name %>
+       <a href="/profile">Профиль</a>
+       <a href="/exit">Выйти</a> 
+    <% } else { %>
+        <a href="/login">Войти</a>
+        <a href="/join">Регистрация</a>
+    <% } %>
+    </div>
+    <div class="container">
+    <%= content %>
+    </div>
+</body>
+</html>
